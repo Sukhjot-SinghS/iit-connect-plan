@@ -2,7 +2,8 @@ import { supabase } from "@/integrations/supabase/client";
 
 export function isValidIITEmail(email: string): boolean {
   const iitPattern = /^[a-zA-Z0-9._%+-]+@iit[a-z]*\.ac\.in$/i;
-  return iitPattern.test(email);
+  const normalEmailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return iitPattern.test(email) || normalEmailPattern.test(email);
 }
 
 export async function signUp(email: string, password: string) {
