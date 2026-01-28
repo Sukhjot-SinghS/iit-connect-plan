@@ -56,12 +56,12 @@ export default function Landing() {
           </p>
           <div className="flex justify-center gap-4">
             <Link to="/signup">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" variant="destructive" className="text-lg px-8">
                 Join Now
               </Button>
             </Link>
             <Link to="/login">
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              <Button size="lg" variant="outline" className="text-lg px-8 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground">
                 Sign In
               </Button>
             </Link>
